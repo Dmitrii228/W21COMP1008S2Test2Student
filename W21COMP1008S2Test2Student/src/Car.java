@@ -33,7 +33,16 @@ public class Car {
         return price;
     }
 
+    public static List<String> getMakes() {
+        return Arrays.asList("Ford", "Honda","Porsche");
+    }
     public void setMake(String make) {
+    List<String> validMake = getMakes();
+    if (validMake.contains(make)){
+        this.make = make;
+    }
+    else
+        throw new IllegalArgumentException(make+" is not a valid make. Use one of"+validMake);
     }
 
     public void setModel(String model) {
