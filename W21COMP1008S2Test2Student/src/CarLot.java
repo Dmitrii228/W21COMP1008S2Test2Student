@@ -7,10 +7,12 @@ public class CarLot {
     private ArrayList<Car> cars;
 
     public CarLot(){
+        cars = new ArrayList<>();
     }
 
     public void addCar(Car car)
     {
+        cars.add(car);
     }
 
     public double getInventoryValue()
