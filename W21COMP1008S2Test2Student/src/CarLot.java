@@ -17,7 +17,12 @@ public class CarLot {
 
     public double getInventoryValue()
     {
-        return -1;
+        double total = 0;
+        for (int i = 0; i < cars.size(); i++) {
+            total += cars.get(i).getPrice();
+        }
+
+        return total;
     }
 
     public ArrayList<Car> getCarsByBrand(String manufacturer)
