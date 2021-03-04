@@ -44,8 +44,37 @@ public class Car {
     else
         throw new IllegalArgumentException(make+" is not a valid make. Use one of"+validMake);
     }
-
+    public static List<String> getFordModels(){
+        return  Arrays.asList("F150", "Escort","Explorer");
+    }
     public void setModel(String model) {
+        List<String> fordModel = Arrays.asList("F150", "Escort", "Explorer");
+        List<String> hondaModel = Arrays.asList("Accord", "Civic","Pilot");
+        List<String> porscheModel = Arrays.asList("911", "Cayman","718 Boxster");
+
+
+        if(make.equals("Ford")){
+            if(fordModel.contains(model)){
+                this.model = model;
+            }
+            else
+                throw new IllegalArgumentException("Model is invalid!!!");
+        }
+        else if (make.equals("Honda")){
+            if(hondaModel.contains(model)){
+                this.model = model;
+            }
+            else
+                throw new IllegalArgumentException("Model is invalid!!!");
+        }
+        else if (make.equals("Porsche")){
+            if(porscheModel.contains(model)){
+                this.model = model;
+            }
+            else
+                throw new IllegalArgumentException("Model is invalid!!!");
+        }
+
     }
 
     public void setMileage(int mileage) {
