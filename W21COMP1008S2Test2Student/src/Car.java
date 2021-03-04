@@ -1,12 +1,20 @@
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Name: Dmitrii Demin
+ * Student number: 200464709
+ */
 public class Car {
     private String make, model;
     private int mileage;
     private double price;
 
     public Car(String make, String model, int mileage, double price) {
+    setMake(make);
+    setModel(model);
+    setMileage(mileage);
+    setPrice(price);
     }
 
     public String getMake() {

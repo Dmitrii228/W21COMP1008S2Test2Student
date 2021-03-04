@@ -1,5 +1,8 @@
 import java.util.ArrayList;
-
+/**
+ * Name: Dmitrii Demin
+ * Student number: 200464709
+ */
 public class CarLot {
     private ArrayList<Car> cars;
 
