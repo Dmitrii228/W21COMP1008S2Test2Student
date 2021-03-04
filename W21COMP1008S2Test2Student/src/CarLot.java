@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+
 /**
  * Name: Dmitrii Demin
  * Student number: 200464709
@@ -24,10 +25,15 @@ public class CarLot {
 
         return total;
     }
+    public ArrayList<Car> getCarsByBrandFord(String manufacturer){
+       return null;
 
+    }
     public ArrayList<Car> getCarsByBrand(String manufacturer)
     {
-        return null;
+        //if (manufacturer.equals("Ford"))
+       return getCarsByBrandFord("Ford");
+
     }
 
     public ArrayList<Car> getCarsByModel(String model)
@@ -52,7 +58,13 @@ public class CarLot {
 
     public double getAvgPrice()
     {
-        return -1;
+        double total = 0;
+        double avgPrice = 0;
+        for (int i = 0; i < cars.size(); i++) {
+            total += cars.get(i).getPrice();
+        }
+        avgPrice = total/cars.size();
+        return avgPrice;
     }
 
     public int getNumOfCarsInInventory()
